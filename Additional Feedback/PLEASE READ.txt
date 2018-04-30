@@ -1,0 +1,10 @@
+Additional feedback can be found on our ludum dare site.
+
+https://ldjam.com/events/ludum-dare/38/k-r-a-b-s
+
+Please note this is for the original standalone / web build.
+
+DOES NOT APPLY TO THE ANDROID VERSION, however it did give us a 
+feedback basis on what to improve in the early stages of the 
+Design Masterclass project!
+
