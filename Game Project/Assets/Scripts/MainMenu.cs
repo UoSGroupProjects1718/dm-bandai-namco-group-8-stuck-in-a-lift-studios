@@ -57,46 +57,28 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	public void OnQuickstartButton(){
-			int random1Char = Random.Range(0, 3);
-			switch (random1Char){
-				case 0:
-					GameSettings.instance.player1Char = PlayerCharacter.KRAB;
-					break;
-				case 1:
-					GameSettings.instance.player1Char = PlayerCharacter.BEETLE;
-					break;
-				case 2:
-					GameSettings.instance.player1Char = PlayerCharacter.ROACH;
-					break;
-			}
-			int random2Char = Random.Range(0, 2);
-			switch (random2Char){
-				case 0:
-					GameSettings.instance.player2Char = PlayerCharacter.KRAB;
-					break;
-				case 1:
-					GameSettings.instance.player2Char = PlayerCharacter.BEETLE;
-					break;
-				case 2:
-					GameSettings.instance.player2Char = PlayerCharacter.ROACH;
-					break;
-			}
+//		int[] roundCounts = { 1, 3 , 5 };
+//		int[] roundTimes = { 30, 60, 90 };
 
-		int[] roundCounts = { 1, 3 , 5 };
-		int[] roundTimes = { 30, 60, 90 };
+		GameSettings.instance.roundCount = 3;//roundCounts[Random.Range(0, 3)];
+		GameSettings.instance.roundTime = 60;//roundTimes[Random.Range(0,3)];
 
-		GameSettings.instance.roundCount = roundCounts[Random.Range(0, 3)];
-		GameSettings.instance.roundTime = roundTimes[Random.Range(0,3)];
 		int randomStage = Random.Range(0,3);
 		Debug.Log("Random Stage = " + randomStage);
 		switch (randomStage){
 			case 0:
+				GameSettings.instance.player1Char = PlayerCharacter.KRAB;
+				GameSettings.instance.player2Char = PlayerCharacter.KRAB;
 				StartCoroutine(LoadAsyncScene("DigitalForest"));
 				break;
 			case 1: 
+				GameSettings.instance.player1Char = PlayerCharacter.BEETLE;
+				GameSettings.instance.player2Char = PlayerCharacter.BEETLE;
 				StartCoroutine(LoadAsyncScene("FacingWorlds"));
 				break;
 			case 2:
+				GameSettings.instance.player1Char = PlayerCharacter.ROACH;
+				GameSettings.instance.player2Char = PlayerCharacter.ROACH;
 				StartCoroutine(LoadAsyncScene("IndustrialAction"));
 				break;
 		}
