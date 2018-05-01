@@ -49,11 +49,10 @@ public class MainMenu : MonoBehaviour {
 
 	public void OnMultiplayerButton(){
 		AndroidManager.HapticFeedback();
+		GameSettings.instance.playerMode = PlayerMode.HUMAN;
 		singleplayerObj.SetActive(false);
 		quickstartObj.SetActive(true);
 		customiseObj.SetActive(true);
-		GameSettings.instance.playerMode = PlayerMode.HUMAN;
-
 	}
 
 	public void OnQuickstartButton(){

@@ -218,6 +218,7 @@ public class GameMenuNew : MonoBehaviour {
 				switch (selectionIndex){
 					case 0:
 						currentLevel = LevelSelected.FOREST;
+						GameSettings.instance.gameMode = GameMode.DEFAULT;
 						break;
 					case 1:
 						currentLevel = LevelSelected.WORLDS;
@@ -225,6 +226,7 @@ public class GameMenuNew : MonoBehaviour {
 						break;
 					case 2:
 						currentLevel = LevelSelected.INDUSTRY;
+						GameSettings.instance.gameMode = GameMode.DEFAULT;
 						break;
 				}
 				currentSetting = Setting.ROUND_COUNT;
